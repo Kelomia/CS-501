@@ -12,7 +12,7 @@ class Calendar{
         GregorianCalendar calendar = new GregorianCalendar();
 
         System.out.println("Current Year/Month/Day:");
-	    System.out.println("\t"+calendar.get(calendar.YEAR)+"/"+calendar.get(calendar.MONTH)+
+	    System.out.println("\t"+calendar.get(calendar.YEAR)+"/"+(1+calendar.get(calendar.MONTH))+
 	                       "/"+calendar.get(calendar.DAY_OF_MONTH));
 
         // Set elapsed time since 1970, January 1 to 1234567898765L;
