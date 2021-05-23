@@ -65,11 +65,7 @@ class LinearEquation{
 
     //Method isSolvable():
     public boolean isSolvable(){
-        if((a*d-b*c)==0){
-            return false;
-        }else{
-            return true;
-        }
+        return (a * d - b * c) != 0;
     }
 
     //Two getX/Y methods
@@ -88,7 +84,7 @@ class LinearEquation{
 	    System.out.println("a:"+Equa.a+"\nb:"+Equa.b+"\nc:"+Equa.c+"\nd:"+Equa.d+"\ne:"+Equa.e+"\nf:"+Equa.f);
 	    // Show the equation;
 
-        int flag=1; // Mark for LinearEquation or LinesIntersect;
+        int flag; // Mark for LinearEquation or LinesIntersect;
 
         Scanner scan = new Scanner(System.in);
 
@@ -127,8 +123,8 @@ class LinearEquation{
                 x4=scan.nextDouble();y4=scan.nextDouble();
 
                 // Get the a,b,c,d,e,f for lines' intersecting;
-                Equa.setA(y1-y2);Equa.setB(x1+x2);Equa.setC(y3=y4);
-                Equa.setD(x3+x4);Equa.setE(x2*y1-x1*y2);Equa.setF(x4*y3-x3*y4);
+                Equa.setA(y1-y2);Equa.setB(x2-x1);Equa.setC(y3-y4);
+                Equa.setD(x4-x3);Equa.setE(x2*y1-x1*y2);Equa.setF(x4*y3-x3*y4);
             }
 
                 // If equation is solvable, show the solution, else tell not solvable;
